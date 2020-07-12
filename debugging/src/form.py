@@ -50,13 +50,13 @@ class RegisterForm(FlaskForm):
             "class": "btn btn-primary",
         }
     )
-
+    '''
     def validate_email(self, field):
         email = field.data
         user = User.query.filter_by(email=email).count()
         if user == 1:
             raise ValidationError("The email already exists！")
-
+    '''
 
 # login form
 class LoginForm(FlaskForm):

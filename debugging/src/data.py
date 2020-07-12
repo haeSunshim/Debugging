@@ -1,12 +1,26 @@
-from flask_sqlalchemy import SQLAlchemy
-from debugging.src.demo import app
 
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from flask import Flask
+#from debugging.src.demo import app
+
+class Config(object):
+    # debug
+    DEBUG = False
+
+    # SQLAlchemy
+    SQLALCHEMY_DATABASE_URI = "postgresql://scott:tiger@localhost/shelter"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+app = Flask(__name__)
 db = SQLAlchemy(app)
+
+engine = create_engine('postgresql://scott:tiger@localhost/mydatabase')
 
 class Host(db.Model):
     __tablename__ = "host"
 
-    id = db.column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(32))
     email = db.Column(db.String(100), unique=True)
     pwd = db.Column(db.String(100))
@@ -29,11 +43,10 @@ class Refugee(db.Model):
 class User(db.Model):
     __tablename__ = "user"
 
-    id = db.column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(32))
     email = db.Column(db.String(100), unique=True)
     pwd = db.Column(db.String(100))
-
 
 
 
