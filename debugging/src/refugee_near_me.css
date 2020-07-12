@@ -1,4 +1,7 @@
-div {
+body {
   margin: 20px;
   padding: 20px;
+}
+.btn-primary {
+    margin-bottom:10px;
 }
