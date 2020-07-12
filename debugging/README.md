@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+We have used Geolocation API to fetch the user's current location
+
+and Bootstrap for the icon and design of the frontend, used image from https://unsplash.com/ (copy right free stock image)
+
+Open source reference for flask: https://github.com/eyt2018/Travel
