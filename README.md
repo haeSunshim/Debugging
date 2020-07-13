@@ -1,2 +1,2 @@
 # Debugging
-WIT x Google Hacakthon Project (Team Debugging)
+Second Place: WIT x Google Hacakthon (Team Debugging)
